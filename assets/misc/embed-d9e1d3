@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style type="text/css">
+      html, body, #mapDiv {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="mapDiv"></div>
+      
+    <script nonce="id5fVx2zdIcsxYHd1lNPRg">
+      function onEmbedLoad() {
+        initEmbed([null,null,null,null,null,[[[2,"categorical-search-results-injection",null,null,null,null,null,[null,null,null,null,null,null,null,null,null,null,11,null,[null,null,null,null,null,null,null,null,null,null,null,null,null,1]]]],null,null,[[null,"no. 9, Aman Plaza, 1st floor, off, 1043/44, Raviwar Peth, Pune, Maharashtra 411002",null,null,[[["4306217282281547279","14447822324465305052"],"/g/11yrndk5l1",null,[185157870,738617973],null,null,null,null,null,null,null,null,null,null,"gcid:hardware_store"],[["4306215751415462887","17819921309211522985"],"/g/1pp2wzjkj",null,[185157522,738618024],null,null,null,null,null,null,null,null,null,null,"gcid:catering_service"],[["4306217098020404879","4118072556641939020"],"/g/11p64k24qk",null,[185159555,738619542],null,null,null,null,null,null,null,null,null,null,"gcid:safety_equipment_supplier"],[["4306215750236846711","9756427650480825512"],"/g/1pp2w_5ps",null,[185159290,738601570],null,null,null,null,null,null,null,null,null,null,"gcid:key_duplication_service"],[["4306215777051432277","17053740595538781158"],"/g/11rr_5s8d",null,[185160120,738606091],null,null,null,null,null,null,null,null,null,null,"gcid:safety_equipment_supplier"],[["4306215751185229657","12726146580238265722"],"/g/11g2lkqsym",null,[185158381,738619754],null,null,null,null,null,null,null,null,null,null,"gcid:hardware_store"],[["4306215763233330269","9275109072954340301"],"/g/11ckvn24b3",null,[185135812,738618027],null,null,null,null,null,null,null,null,null,null,"gcid:security_system_supplier"]],10,null,1,null,null,null,null,[[],0.1349356770515442],null,null,null,1]]],null,["en_US"],[null,null,null,"/maps/api/js/ApplicationService.GetEntityDetails","/maps/embed/upgrade204",null,"/maps/embed/record204"],null,null,null,null,null,null,null,null,"AvG0avjbDdPiseMPkbTBsQk",null,null,null,[[[3783.311915245746,73.8610662,18.5147966],[0,0,0],null,13.10000038146973],15,null,null,null,["no. 9, Aman Plaza, 1st floor, off, 1043/44, Raviwar Peth, Pune, Maharashtra 411002"]],null,null,null,0,null,null,null,null,null,null,[1]]);
+      }
+      function onApiLoad() {
+        var embed = document.createElement('script');
+        embed.src = "https://maps.gstatic.com/maps-api-v3/embed/js/66/6c/init_embed.js";
+        document.body.appendChild(embed);
+      }
+    </script>
+    <link rel="preload" href="https://maps.gstatic.com/maps-api-v3/embed/js/66/6c/init_embed.js" nonce="id5fVx2zdIcsxYHd1lNPRg" as="script" />
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCmL18misQw9KdwqGaw3zHkitj8vG6QF2Y&amp;paint_origin=&amp;libraries=geometry,search&amp;v=weekly&amp;loading=async&amp;language=en_US&amp;experimentation=allowed&amp;callback=onApiLoad" nonce="id5fVx2zdIcsxYHd1lNPRg" async defer></script>
+  </body>
+</html>

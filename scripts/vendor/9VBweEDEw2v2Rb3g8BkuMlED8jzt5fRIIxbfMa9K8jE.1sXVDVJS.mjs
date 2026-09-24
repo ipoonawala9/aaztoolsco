@@ -1,0 +1,33 @@
+import { t as e } from "./rolldown-runtime.Dh6celcD.mjs";
+import { n as t, t as n } from "./shared-lib.DAh5fv1m.mjs";
+function r(e, n) {
+  return {
+    breakpoints: [
+      { hash: `8ccmy4`, mediaQuery: `(min-width: 1200px)` },
+      { hash: `1ki6owg`, mediaQuery: `(min-width: 810px) and (max-width: 1199.98px)` },
+      { hash: `lo29kc`, mediaQuery: `(max-width: 809.98px)` },
+    ],
+    description: t(e, n).description,
+    elements: { dIASV1yj3: `classes` },
+    robots: `max-image-preview:large`,
+    serializationId: `framer-2i7x2`,
+    title: t(e, n).title || `Multimeters And Digital Meters 2Nd Page 2`,
+    viewport: `width=device-width`,
+  };
+}
+var i,
+  a,
+  o = e(() => {
+    (n(),
+      (i = 1),
+      (a = {
+        exports: {
+          default: { type: `function`, annotations: { framerContractVersion: `1` } },
+          metadataVersion: { type: `variable`, annotations: { framerContractVersion: `1` } },
+          __FramerMetadata__: { type: `variable` },
+        },
+      }));
+  });
+o();
+export { a as __FramerMetadata__, r as default, i as metadataVersion, o as t };
+//# sourceMappingURL=9VBweEDEw2v2Rb3g8BkuMlED8jzt5fRIIxbfMa9K8jE.1sXVDVJS.mjs.map

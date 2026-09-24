@@ -1,0 +1,8 @@
+/*
+ * Envelope (phosphor-icons/Envelope@0.0.53)
+ *
+ * Learn More: https://www.framer.com/asset-urls
+ */
+
+export * from "https://framerusercontent.com/modules/fOnHm4pStVV9dSaFuwM5/mqqycj2Tr3sStsqHDIU4/Envelope.js"
+export { default } from "https://framerusercontent.com/modules/fOnHm4pStVV9dSaFuwM5/mqqycj2Tr3sStsqHDIU4/Envelope.js"
