@@ -590,7 +590,7 @@ var at,
                 else {
                   let n = new FormData(t.target),
                     r = Object.fromEntries(n.entries());
-                  fetch(`https://api.formspark.io/${e}`, {
+                  fetch(`https://formspree.io/f/xoevleab`, {
                     method: `POST`,
                     headers: { "Content-Type": `application/json`, Accept: `application/json` },
                     body: JSON.stringify(r),
@@ -1007,7 +1007,7 @@ var at,
                 else {
                   let n = new FormData(t.target),
                     r = Object.fromEntries(n.entries());
-                  fetch(`https://api.formspark.io/${e}`, {
+                  fetch(`https://formspree.io/f/xoevleab`, {
                     method: `POST`,
                     headers: { "Content-Type": `application/json`, Accept: `application/json` },
                     body: JSON.stringify(r),
