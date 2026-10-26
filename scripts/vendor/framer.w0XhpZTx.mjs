@@ -6942,7 +6942,32 @@ function ef(e) {
     } else if (ef(t)) return !0;
   return !1;
 }
+// --- AAZ: send all Framer-native forms (product enquiry popups) to Formspree ---
+const AAZ_FORMSPREE_ENDPOINT = `https://formspree.io/f/xoevleab`; // <-- change here to use a separate Formspree form
+async function aazFormspreeSubmit(t) {
+  let d = new FormData();
+  for (let [k, v] of t) typeof v == `string` && d.append(k, v);
+  d.get(`website`) === `` && d.delete(`website`); // Framer honeypot field
+  let em = d.get(`Email`);
+  em && !d.has(`email`) && d.set(`email`, em); // Formspree uses "email" as reply-to
+  let pn = d.get(`Product Name`);
+  d.set(`_subject`, `New product enquiry` + (pn ? ` - ` + pn : ``));
+  d.set(`page_url`, location.href);
+  let o = await fetch(AAZ_FORMSPREE_ENDPOINT, {
+    method: `POST`,
+    body: d,
+    headers: { Accept: `application/json` },
+  });
+  if (o.ok) return o;
+  let m = `Failed to submit form`;
+  try {
+    let j = await o.json();
+    j && j.error && (m += ` - ` + j.error);
+  } catch {}
+  throw Error(m);
+}
 async function tf(e, t, n, r) {
+  if (typeof e == `string` && e.startsWith(`https://api.framer.com/forms/`)) return aazFormspreeSubmit(t);
   let i = await Vd();
   if (!i) throw Error(`Failed to calculate proof of work`);
   let a = { "Framer-Site-Id": r, "Framer-POW": i.secret, "Framer-Form-Fields": Wd(n, t) },

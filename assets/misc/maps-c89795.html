@@ -4,112 +4,31 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AAZ Tools Location</title>
-
     <style>
-        html,
-        body {
-            width: 100%;
-            height: 100%;
-            margin: 0;
-            padding: 0;
-        }
-
-        #map {
-            width: 100%;
-            height: 100%;
-        }
-
+        html, body { width: 100%; height: 100%; margin: 0; padding: 0; }
+        iframe { width: 100%; height: 100%; border: 0; display: block; }
         .map-link {
-            position: absolute;
-            top: 10px;
-            left: 10px;
-            z-index: 10;
-
-            display: inline-block;
-            padding: 10px 14px;
-
-            background: #ffffff;
-            color: #1a73e8;
-
-            border-radius: 4px;
-            box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
-
-            font-family: Arial, sans-serif;
-            font-size: 14px;
-            font-weight: 600;
-
+            position: absolute; top: 10px; left: 10px; z-index: 10;
+            display: inline-block; padding: 10px 14px;
+            background: #ffffff; color: #1a73e8;
+            border-radius: 4px; box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
+            font-family: Arial, sans-serif; font-size: 14px; font-weight: 600;
             text-decoration: none;
         }
-
-        .map-link:hover {
-            background: #f8f9fa;
-        }
+        .map-link:hover { background: #f8f9fa; }
     </style>
 </head>
-
 <body>
+<a class="map-link"
+   href="https://www.google.com/maps/search/?api=1&query=18.5147966,73.8610662"
+   target="_blank" rel="noopener noreferrer">Open in Google Maps &#8599;</a>
 
-<a
-    class="map-link"
-    href="https://www.google.com/maps/search/?api=1&query=18.5147966,73.8610662"
-    target="_blank"
-    rel="noopener noreferrer"
->
-    Open in Google Maps ↗
-</a>
-
-<div id="map"></div>
-
-<script>
-    function initMap() {
-        const location = {
-            lat: 18.5147966,
-            lng: 73.8610662
-        };
-
-        const map = new google.maps.Map(document.getElementById("map"), {
-            center: location,
-            zoom: 17,
-            mapTypeId: "roadmap",
-            streetViewControl: false,
-            mapTypeControl: true,
-            fullscreenControl: true,
-            zoomControl: true
-        });
-
-        const marker = new google.maps.Marker({
-            position: location,
-            map: map,
-            title: "AAZ Tools Co."
-        });
-
-        const infoWindow = new google.maps.InfoWindow({
-            content: `
-                <div style="font-family: Arial, sans-serif; padding: 4px 8px;">
-                    <strong>AAZ Tools Co.</strong><br>
-                    <span style="font-size: 13px;">
-                        no. 9, Aman Plaza, 1st floor,<br>
-                        off, 1043/44, Raviwar Peth,<br>
-                        Pune, Maharashtra 411002
-                    </span>
-                </div>
-            `
-        });
-
-        marker.addListener("click", () => {
-            infoWindow.open({
-                map: map,
-                anchor: marker
-            });
-        });
-    }
-</script>
-
-<script
-    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCPatSd7BX1v8Lr7z-2bANkCodqzZ_bly0&callback=initMap&loading=async"
-    async
-    defer
-></script>
-
+<!-- Keyless Google Maps embed: no API key, no billing account needed -->
+<iframe
+    title="AAZ Tools Co. location"
+    src="https://www.google.com/maps?q=18.5147966,73.8610662(AAZ%20Tools%20Co.)&z=17&output=embed"
+    loading="lazy"
+    referrerpolicy="no-referrer-when-downgrade"
+    allowfullscreen></iframe>
 </body>
 </html>
