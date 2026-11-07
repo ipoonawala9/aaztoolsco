@@ -1,0 +1,50 @@
+/* =====================================================================
+   AAZ Tools Co - ISO certification styling
+   Loaded on every page via <link rel="stylesheet" href="/aaz-iso.css">.
+   Tweak sizes here; no HTML/JS edits needed.
+   ===================================================================== */
+
+/* ---- Footer: ISO badges (right half, where the nav links used to be) ---- */
+.aaz-iso-badge { list-style: none; margin: 0; padding: 0; line-height: 0; }
+.aaz-iso-badge img { display: block; width: 128px; height: auto; }   /* <- badge size */
+
+footer.framer-w0zOv.framer-w0zOv .framer-1ixsqpa {                  /* badge stack (was the nav list) */
+  gap: 16px;                                                         /* <- space between the two badges */
+  align-items: center;
+  justify-content: center;
+}
+footer.framer-w0zOv.framer-w0zOv .framer-16o4g8o { align-items: center; }
+footer.framer-w0zOv.framer-w0zOv .framer-1gnzz6b { height: auto; }   /* contact block centres against the badges */
+
+/* Desktop: right half is vertically centred against the left logo + text block */
+@media (min-width: 1200px) {
+  footer.framer-w0zOv.framer-w0zOv .framer-a4m4qr  { align-items: stretch; }
+  footer.framer-w0zOv.framer-w0zOv .framer-16gvor2 { align-self: stretch; height: auto; padding-top: 80px; }
+}
+
+/* Tablet: badges sit at the left, contact details at the right (same as the old nav) */
+@media (min-width: 810px) and (max-width: 1199.98px) {
+  footer.framer-w0zOv.framer-w0zOv .framer-1ixsqpa { align-items: flex-start; }
+  .aaz-iso-badge img { width: 120px; }
+}
+
+/* Phone: contact details first, then the two badges side by side to keep the footer short */
+@media (max-width: 809.98px) {
+  footer.framer-w0zOv.framer-w0zOv .framer-1ixsqpa { flex-direction: row; align-items: center; justify-content: flex-start; gap: 16px; }
+  .aaz-iso-badge img { width: 104px; }
+}
+
+/* ---- Header: "ISO Certified" pill beside the Contact us button ---- */
+.aaz-iso-pill {
+  display: inline-flex; align-items: center; gap: 7px; flex: none; white-space: nowrap;
+  padding: 8px 14px 8px 9px;
+  border: 1px solid rgba(45, 53, 138, 0.35); border-radius: 999px;
+  background: rgba(45, 53, 138, 0.07); color: rgb(45, 53, 138);
+  font: 500 13px/1 Inter, "Inter Placeholder", sans-serif; letter-spacing: -0.01em;
+}
+.aaz-iso-pill::before {
+  content: "\2713"; display: inline-flex; align-items: center; justify-content: center;
+  width: 17px; height: 17px; border-radius: 50%;
+  background: rgb(45, 53, 138); color: #fff; font-size: 10px; line-height: 1;
+}
+@media (max-width: 1000px) { .aaz-iso-pill { display: none; } }   /* avoid crowding the header on small screens */
