@@ -5548,7 +5548,7 @@ var Dr,
                                   }),
                                 }),
                               }),
-                            re() && _(`span`, { className: `aaz-iso-pill`, children: `ISO Certified` }),
+                            re() && _(`button`, { type: `button`, className: `aaz-iso-pill`, "aria-haspopup": `dialog`, children: `ISO Certified` }),
 re() &&
                               _(K, {
                                 height: 46,
