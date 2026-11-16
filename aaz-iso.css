@@ -48,3 +48,33 @@ footer.framer-w0zOv.framer-w0zOv .framer-1gnzz6b { height: auto; }   /* contact 
   background: rgb(45, 53, 138); color: #fff; font-size: 10px; line-height: 1;
 }
 @media (max-width: 1000px) { .aaz-iso-pill { display: none; } }   /* avoid crowding the header on small screens */
+
+/* ===== ISO certificate viewer ===== */
+button.aaz-iso-pill { -webkit-appearance: none; appearance: none; cursor: pointer; margin: 0; transition: background .15s, border-color .15s; }
+button.aaz-iso-pill:hover { background: rgba(45, 53, 138, 0.14); border-color: rgba(45, 53, 138, 0.6); }
+button.aaz-iso-pill:focus-visible { outline: 2px solid rgb(45, 53, 138); outline-offset: 2px; }
+.aaz-iso-badge { cursor: pointer; }
+.aaz-iso-badge:focus-visible { outline: 2px solid rgb(45, 53, 138); outline-offset: 4px; border-radius: 50%; }
+
+html.aaz-cert-lock, html.aaz-cert-lock body { overflow: hidden; }
+.aaz-cert[hidden] { display: none; }
+.aaz-cert { position: fixed; inset: 0; z-index: 2147483000; display: flex; align-items: center; justify-content: center; padding: 16px; font-family: Inter, "Inter Placeholder", sans-serif; }
+.aaz-cert__backdrop { position: absolute; inset: 0; background: rgba(15, 18, 40, 0.65); }
+.aaz-cert__panel { position: relative; display: flex; flex-direction: column; width: min(760px, 100%); max-height: 100%; background: #fff; border-radius: 14px; overflow: hidden; box-shadow: 0 24px 60px rgba(0, 0, 0, 0.35); }
+.aaz-cert__head { display: flex; align-items: center; justify-content: space-between; padding: 14px 18px; border-bottom: 1px solid #e6e8f0; }
+.aaz-cert__heading { margin: 0; font-size: 18px; font-weight: 600; color: #181818; }
+.aaz-cert__close { border: 0; background: transparent; font-size: 28px; line-height: 1; cursor: pointer; color: #444; padding: 2px 8px; border-radius: 6px; }
+.aaz-cert__close:hover { background: #eef0f6; }
+.aaz-cert__tabs { display: flex; gap: 8px; padding: 12px 18px 0; }
+.aaz-cert__tab { border: 1px solid rgba(45, 53, 138, 0.35); background: #fff; color: rgb(45, 53, 138); font: 500 14px/1 Inter, "Inter Placeholder", sans-serif; padding: 9px 14px; border-radius: 999px; cursor: pointer; }
+.aaz-cert__tab.is-active { background: rgb(45, 53, 138); color: #fff; border-color: rgb(45, 53, 138); }
+.aaz-cert__body { flex: 1 1 auto; min-height: 0; overflow: auto; margin-top: 12px; padding: 16px; background: #eef0f6; -webkit-overflow-scrolling: touch; }
+.aaz-cert__img { display: block; width: min(100%, 620px); height: auto; margin: 0 auto; background: #fff; box-shadow: 0 2px 12px rgba(0, 0, 0, 0.18); }
+.aaz-cert__foot { padding: 14px 18px 16px; border-top: 1px solid #e6e8f0; }
+.aaz-cert__title { margin: 0 0 4px; font-size: 15px; font-weight: 600; color: #181818; }
+.aaz-cert__meta { margin: 0 0 4px; font-size: 13px; line-height: 1.45; color: #555; }
+.aaz-cert__actions { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; margin-top: 12px; }
+.aaz-cert__btn { display: inline-block; padding: 10px 16px; border: 1px solid rgb(45, 53, 138); border-radius: 6px; background: #fff; color: rgb(45, 53, 138); font: 500 14px/1 Inter, "Inter Placeholder", sans-serif; text-decoration: none; cursor: pointer; }
+.aaz-cert__btn--primary { background: rgb(45, 53, 138); color: #fff; }
+.aaz-cert__link { font-size: 13px; color: rgb(45, 53, 138); text-decoration: underline; margin-left: 4px; }
+@media (max-width: 600px) { .aaz-cert { padding: 0; } .aaz-cert__panel { border-radius: 0; height: 100%; } .aaz-cert__body { padding: 10px; } }
